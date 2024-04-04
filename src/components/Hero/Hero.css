@@ -1,0 +1,185 @@
+.hero-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100svh; /* Cover the full viewport height */
+}
+
+.hero-container {
+    position: relative; /* Added to control the positioning of child elements absolutely within the container */
+    height: 100svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center children vertically */
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.overlay {
+    background: rgba(137,196,244,0.2);
+    /* background: rgba(0,0,0,0.5); */
+    height: 100svh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure it's above the background image but below text/logo */
+}
+
+.title-wrapper {
+    position: absolute;
+    z-index: 2;
+    bottom: 45%;
+    right: 5%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+    .title-wrapper {
+        right: 10%;
+        width: 80%;
+        flex-direction: column;
+    }
+}
+/* -------------------------------- NASLOV -------------------------------- */
+
+.title-container {
+    text-align: right;
+    display: block;
+    margin: 0;
+    width: 100%;
+}
+.title-container h1, .title-container h3 {
+    font-size: 8vh; /* Adjust based on the viewport width for better responsiveness */
+    padding-bottom: 1vw; /* Similarly, make padding responsive */
+    margin: 0.5vw 0; /* Adjust margin for consistency */
+    display: block;
+    line-height: 92%;
+    width: 100%;
+    box-sizing: border-box;
+    /* text decoration */
+    text-align: right;
+    text-decoration: none;
+    color: var(--backgroundColor);/* 
+    color: var(--odzadjeBarva); */
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-shadow: 2px 2px #000;
+    margin: 0.5rem;
+}
+.title-container h3{
+    font-size: 6vh;
+    text-transform: none;
+    padding-bottom: 2rem;
+}
+@media screen and (max-width: 550px) {
+    .title-container h1, .title-container h3 {
+        font-size: 3rem;
+        width: 100%;
+    }
+    
+    .title-container h3 {
+        font-size: 2rem;
+    }
+}
+/* -------------------------------- PODATKI-------------------------------- */
+.details-container {
+    position: absolute;
+    bottom: -150%;
+    right: 0%;
+    display: flex;
+    flex-direction: column;  
+    flex-wrap: nowrap;
+    width: 34%;
+    /* gap: 3vw; */
+    margin: 0;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 1px 1px #000;
+    background-color: var(--odzadjeBarva);
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.detail-prop{
+    position: relative;
+    right: 0%;
+    flex-grow: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    margin: 0 0;
+    padding: 0.5rem 0;
+
+    font-size: var(--fontSizePpc);
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: none;
+    list-style: none;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.detail-big {
+    font-size: 3vh;
+}
+@media screen and (max-width: 1100px) {
+    .details-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 70%;
+    }
+    .detail-prop{
+        font-size: var(--fontSizePphone);
+        padding: 1rem 0;
+        width: auto;
+        flex-direction: column;
+        padding-bottom: 0rem; /* Adjust padding as needed */
+    }
+    .detail-big {
+        font-size: 4vw;
+    }
+}
+.border-container-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.border-container-wrapper-up{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+}
+.border-container{
+    width: 40%;
+    height: auto;
+    border: 1px solid #fff;
+    margin: 0;
+
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+    font-size: 0.8rem;
+}
+
+.left{
+    width: 60%;
+    height: auto;
+}

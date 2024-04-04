@@ -1,0 +1,95 @@
+.lokacija-wrapper {
+    position: relative;
+    min-height: 50vh;
+    height: 100%;
+    width: 100%;
+    background-color: var(--backgroundCmolour);
+    font-family: var(--fontFamily-forum);
+    padding: 2rem 0; /* Matched with Galerija for consistency */
+    margin-bottom: 5rem;
+}
+
+.lokacija-container {
+    display: flex; /* Or grid, depending on desired layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: start; /* Align items to start of the container */
+    gap: 20px; /* Adds space between items */
+    height: auto; /* Allows container to grow as needed */
+    width: 80%;
+    margin: auto;
+    padding: 20px 0; /* Add some vertical padding */
+    max-width: 1920px;
+}
+
+.lokacija-container h1, .lokacija-container h4, .lokacija-container p {
+    text-decoration: none;
+    color: var(--mainColor);
+    line-height: 1.5; /* Adjusted for better readability */
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 0.5rem; /* Adjust as needed */
+    white-space: normal; /* Allow text to wrap */
+    width: 100%; /* Ensure text utilizes the full width */
+}
+.lokacija-container p, .lokacija-container h4 {
+    text-transform: none;
+    font-size: 1rem; /* Adjusted for consistency */
+}
+.lokacija-container h4 {
+    font-size: 1.5rem; /* Adjust size for differentiation */
+}
+
+.lokacija-text p {
+    width: 100%;
+    font-size: 1rem;
+    text-align: justify; /* Justify text for better alignment */
+    line-height: normal; /* Default line height for readability */
+    white-space: normal; /* Ensure text wraps correctly */
+}
+.lokacija-container img {
+    width: 100%; /* For larger screens */
+    margin-top: 1rem;
+    transition: transform 0.2s ease;
+}
+.lokacija-container a{
+    width: 60%;
+}
+.lokacija-container img:hover {
+    transform: scale(1.02);
+}
+.lokacija-text {
+    display: flex;
+    flex-direction: row; /* Default to row for larger screens */
+    justify-content: center; /* Center content (can adjust based on design) */
+    align-items: center; /* Align items vertically */
+    gap: 20px; /* Space between text and image */
+    width: 100%;
+}
+.lokacija-text-divider{
+    width: 30%;
+}
+
+.lokacija-container hr{
+    width: 100%;
+}
+@media screen and (max-width: 1000px) {
+    .lokacija-text {
+        flex-direction: column;
+    }
+
+    .lokacija-container p,  .lokacija-container a {
+        width: 100%;
+    }
+    .lokacija-container img{
+        width: 100%;
+    }
+    .lokacija-text-divider{
+        width: 100%;
+    }
+    .lokacija-container img {
+        height: auto; /* Ensure responsive image size */
+    }
+}

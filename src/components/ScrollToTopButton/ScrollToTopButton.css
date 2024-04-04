@@ -1,0 +1,44 @@
+.scrollBtnSlider {
+    position: fixed;
+    bottom: 5%;
+    right: 0%;
+    height: 3rem;
+    width: 3rem;
+    z-index: 999;
+}
+
+.scrollBtnSlider button{
+    display: block;
+    margin: 0 ;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: rgba(0,0,0,0.1);
+    color: var(--eerie-black-1);
+    border: 1px solid black;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.scrollBtnSlider button:hover{
+    background-color: var(--eerie-black-1);
+    color: var(--white);
+    border: 1px solid var(--eerie-black-1);
+}
+
+@media screen and (max-width: 1000px) {
+    .scrollBtnSlider button:hover{
+        background-color: none;
+    }
+    .scrollBtnSlider button i:hover{
+        color: none;
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

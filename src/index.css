@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Forum&display=swap');
+
+:root{
+  /* colors */
+  --mainColor: rgba(30,81,123,255);
+  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --eerie-black-1: hsla(210, 4%, 9%, 1);
+  --secondaryColor: rgba(255,204,41,255);
+  --backgroundColor: #fff;
+  --odzadjeBarva: rgba(0, 153, 255,0.7);
+  --textColor: #eee;
+  --overlayColor: rgba(137,196,244,0.2);
+  --white: hsla(0, 0%, 100%, 1);
+  
+  /* fonts */
+  --fontFamily-forum: 'Forum', cursive;
+  --fontFamily-dm_sans: 'DM Sans', sans-serif;
+
+  --fontSizePphone: 1.1rem;
+  --fontSizePpc: 1.6rem;
+}
+
+*{
+  padding: 0;
+  margin: auto; 
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--backgroundColor);
+  color:  var(--mainColor);
+}
+*::-webkit-scrollbar-thumb {
+  color: var(--mainColor);
+}
+
+.App {
+  text-align: center;
+  overflow-x: hidden;
+  background-color: var(--backgroundColour);
+}
+
+a {
+  text-decoration: none;
+}

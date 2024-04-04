@@ -1,0 +1,45 @@
+.scrollDownBtnSlider {
+    position: absolute;
+    bottom: 5%;
+    right: 0%;
+    transform: translateX(-50%); /* Add this to center it horizontally */
+    height: 3rem;
+    width: 3rem;
+    z-index: 3;
+}
+
+.scrollDownBtnSlider button{
+    display: block;
+    margin: 0 ;
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.scrollDownBtnSlider button:hover{
+    background-color: var(--eerie-black-1);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+@media screen and (max-width: 1000px) {
+    .scrollDownBtnSlider button:hover{
+        background-color: none;
+    }
+    .scrollDownBtnSlider button i:hover{
+        color: var(--white);
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

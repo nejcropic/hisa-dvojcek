@@ -1,0 +1,100 @@
+.hero-galerija-container {
+    position: absolute;
+    bottom: 0vh;
+    right: 10%;
+    height: calc(30vw * 3 / 4); /* Adjusted to maintain a specific aspect ratio */
+    width: 30vw;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.hero-galerija-container h3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.75rem;
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+}
+
+.hero-galerija-container img {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-galerija-container {
+        left: 5%;
+        bottom: 15vh;
+        height: calc(50vw * 3 / 4); /* Adjust for 9:16 aspect ratio */
+        width: 70vw; /* 60vw height * (9 / 16) = 33.75vw width to maintain a 9:16 ratio */
+    }
+
+    .hero-galerija-container h3{
+        top: 50%;
+    }
+}
+
+
+.slider-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullScreenImage img {
+    max-width: 100%;
+    max-height: 80vh; /* Adjust based on preference */
+}
+
+.btnClose, .btnPrev, .btnNext {
+    position: fixed;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    z-index: 1000;
+}
+
+.btnClose {
+    top: 20px;
+    right: 30px;
+}
+
+.btnPrev, .btnNext {
+    top: 45%;
+    transform: translateY(-50%);
+}
+
+.btnPrev {
+    left: 20px;
+}
+
+.btnNext {
+    right: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .fullScreenImage img {
+        max-width: 90vw;
+    }
+}
